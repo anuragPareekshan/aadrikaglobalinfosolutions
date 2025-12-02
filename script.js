@@ -54,7 +54,7 @@ const industryData = {
     expertise: {
         title: "Expertise",
         description: "Our multidisciplinary expertise spans analytics & reporting, change management, operational strategy, process engineering, program management, systems implementation, and training — ensuring holistic transformation.",
-        image: "assets/images/expertise.jpg"
+        image: "assets/images../expertise.jpg"
     }
 };
 const industryTabs = document.querySelectorAll('.industry-tab');
