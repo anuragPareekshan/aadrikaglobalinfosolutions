@@ -37,7 +37,8 @@
     </script>
 
 <body class="bg-white">
-    <header id="mainHeader" class="fixed top-0 left-0 z-50 w-full text-white transition-all duration-700" style="background-color: #1c4481;"    >
+    <header id="mainHeader" class="fixed top-0 left-0 z-50 w-full text-white transition-all duration-700"
+        style="background-color: #1c4481;">
         <div class="container mx-auto flex items-center justify-between px-5 py-3 lg:h-[100px] lg:px-8 lg:py-0">
             <a href="index.html" class="-ml-4 shrink-0 lg:-ml-8">
                 <img src="assets/images/logo.jpg" alt="Aadrika Logo" class="h-[43px] w-auto lg:h-[85px]"
@@ -50,10 +51,7 @@
                     <div class="hamburger-line absolute top-1/2 h-[2px] w-full -translate-y-1/2 bg-white"></div>
                     <div class="hamburger-line absolute bottom-[10px] h-[2px] w-full bg-white"></div>
                 </button>
-                <a href="contact.html"
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-amber bg-amber px-5 py-1.5 text-sm font-medium text-white transition-colors hover:bg-white hover:text-aadrika-blue">
-                    Contact
-                </a>
+
             </div>
             <nav class="desktop-nav">
                 <ul class="nav-menu">
@@ -297,6 +295,12 @@
                             <a href="aboutus/careers.html" class="block py-2 text-base text-white/80">Careers</a>
                         </div>
                     </li>
+                    <li>
+                        <a href="contact.html"
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-amber bg-amber px-6 py-2.5 text-lg font-medium text-white transition-colors hover:bg-white hover:text-aadrika-blue">
+                            Contact
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -332,7 +336,7 @@
                             First name<span class="text-red-600">*</span>
                         </label>
                         <input type="text" name="firstName" required
-                            class="h-16 px-4 py-6 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none" />
+                            class="h-12 px-4 py-3 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none" />
                     </div>
 
                     <div class="flex flex-col">
@@ -340,7 +344,7 @@
                             Last name<span class="text-red-600">*</span>
                         </label>
                         <input type="text" name="lastName" required
-                            class="h-16 px-4 py-6 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none" />
+                            class="h-12 px-4 py-3 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none" />
                     </div>
 
                     <div class="flex flex-col lg:col-span-2">
@@ -348,7 +352,7 @@
                             Email<span class="text-red-600">*</span>
                         </label>
                         <input type="email" name="email" required
-                            class="h-16 px-4 py-6 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none" />
+                            class="h-12 px-4 py-3 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none" />
                     </div>
 
                     <div class="flex flex-col lg:col-span-2">
@@ -356,7 +360,7 @@
                             Company<span class="text-red-600">*</span>
                         </label>
                         <input type="text" name="company" required
-                            class="h-16 px-4 py-6 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none" />
+                            class="h-12 px-4 py-3 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none" />
                     </div>
 
                     <div class="flex flex-col lg:col-span-2">
@@ -364,7 +368,8 @@
                             Contact reason<span class="text-red-600">*</span>
                         </label>
                         <select name="contactReason" required
-                            class="h-16 px-4 py-6 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none cursor-pointer">
+                            class="min-h-12 px-4 py-3 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none cursor-pointer appearance-none bg-white"
+                            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1.25em 1.25em; padding-right: 2.5rem;">
                             <option value="">Select a reason</option>
                             <option value="general">General Inquiry</option>
                             <option value="support">Support</option>
@@ -377,7 +382,8 @@
                             How did you hear about us?<span class="text-red-600">*</span>
                         </label>
                         <select name="hearAbout" required
-                            class="h-16 px-4 py-6 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none cursor-pointer">
+                            class="min-h-12 px-4 py-3 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none cursor-pointer appearance-none bg-white"
+                            style="background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27currentColor%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3e%3cpolyline points=%276 9 12 15 18 9%27%3e%3c/polyline%3e%3c/svg%3e'); background-repeat: no-repeat; background-position: right 0.75rem center; background-size: 1.25em 1.25em; padding-right: 2.5rem;">
                             <option value="">Select an option</option>
                             <option value="search">Search Engine</option>
                             <option value="social">Social Media</option>
@@ -390,8 +396,8 @@
                         <label class="text-sm font-medium mb-2">
                             Message
                         </label>
-                        <textarea name="message" rows="6"
-                            class="px-4 py-6 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none resize-none"></textarea>
+                        <textarea name="message" rows="4"
+                            class="px-4 py-3 w-full border border-gray-600 rounded-sm text-base focus:border-blue-600 focus:outline-none resize-none"></textarea>
                     </div>
 
                     <div class="flex items-center gap-2 lg:col-span-2">

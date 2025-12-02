@@ -717,10 +717,6 @@ a:hover .arrow-icon {
   background-color: white;
 }
 
-/* img {
-            transition: opacity 0.3s ease;
-        } */
-
 .parallax-container {
   position: relative;
   overflow: hidden;
