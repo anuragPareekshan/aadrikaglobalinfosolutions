@@ -1069,3 +1069,23 @@ header a img {
 .timeline-progress.active {
   animation: growHeight 1s ease forwards;
 }
+
+.carousel-slide {
+  transition: transform 0.3s ease-in-out;
+}
+
+.dot {
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #000;
+}
+
+@media (max-width: 1023px) {
+  .mobile-container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}

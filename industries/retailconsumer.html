@@ -313,7 +313,8 @@
             <div class="relative z-10 flex min-h-[60vh] lg:min-h-screen items-center">
                 <div class="container mx-auto px-5 lg:px-8">
                     <div class="max-w-[540px] py-8 lg:py-24 fade-in-up">
-                        <h1 class="font-sans-title text-4xl lg:text-5xl font-semibold leading-tight mb-3 lg:mb-4 ml-4 lg:ml-10 mt-3 lg:mt-5">
+                        <h1
+                            class="font-sans-title text-4xl lg:text-5xl font-semibold leading-tight mb-3 lg:mb-4 ml-4 lg:ml-10 mt-3 lg:mt-5">
                             Retail & Consumer
                         </h1>
                         <p class="text-base lg:text-lg font-small my-4 lg:my-6 ml-4 lg:ml-10 mt-3 lg:mt-5">
@@ -329,12 +330,14 @@
             <div class="flex flex-col lg:grid lg:grid-cols-6">
                 <div class="col-span-3 flex lg:order-1 lg:ml-auto">
                     <div
-                        class="order-none flex h-full w-full flex-col px-[18px] max-lg:container lg:mx-0 pr-custom mx-auto pt-12 pb-12 lg:px-8 lg:pt-24 lg:pb-24 lg:ml-auto">
+                        class="order-none flex h-full w-full flex-col px-4 sm:px-6 lg:px-8 pt-8 pb-8 lg:pt-24 lg:pb-24 lg:ml-auto max-w-full">
                         <p class="text-base leading-6 mb-5"></p>
                         <h2
-                            class="font-sans-title text-[1.875rem] lg:text-[2.625rem] leading-[3.625rem] font-medium mb-5">
+                            class="font-sans text-2xl sm:text-3xl lg:text-[2.625rem] leading-tight lg:leading-[3.625rem] font-medium mb-5 sm:mb-8">
                             Consumer products companies face fundamental market disruption
                         </h2>
+
+                        <!-- Desktop View -->
                         <div class="ml-20 flex flex-col border-l border-black/20 max-lg:hidden">
                             <div class="relative p-7">
                                 <div class="absolute top-9 right-full mr-3">
@@ -350,7 +353,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <h4 class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium">
+                                <h4 class="font-sans text-xl lg:text-[1.375rem] leading-8 font-medium">
                                     Bill Payment and e-Marketing solutions to fit your needs
                                 </h4>
                                 <p class="text-base leading-6 my-2">
@@ -374,7 +377,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <h4 class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium">
+                                <h4 class="font-sans text-xl lg:text-[1.375rem] leading-8 font-medium">
                                     ERP and accounting platforms such as Microsoft Dynamics
                                 </h4>
                                 <p class="text-base leading-6 my-2">
@@ -397,7 +400,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <h4 class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium">
+                                <h4 class="font-sans text-xl lg:text-[1.375rem] leading-8 font-medium">
                                     Payment Gateways like Paypal, Transfirst, First Data, Merchant Warehouse and others
                                 </h4>
                                 <p class="text-base leading-6 my-2">
@@ -420,7 +423,7 @@
                                         </svg>
                                     </div>
                                 </div>
-                                <h4 class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium">
+                                <h4 class="font-sans text-xl lg:text-[1.375rem] leading-8 font-medium">
                                     OMS (Order Management systems) such as Monsoon and others
                                 </h4>
                                 <p class="text-base leading-6 my-2">
@@ -433,13 +436,13 @@
                         </div>
 
                         <!-- Mobile View - Carousel -->
-                        <div class="relative lg:hidden" role="region" aria-roledescription="carousel">
+                        <div class="relative lg:hidden mobile-container" role="region" aria-roledescription="carousel">
                             <div class="overflow-hidden">
                                 <div id="carouselSlides" class="flex carousel-slide" style="transform: translateX(0%);">
                                     <!-- Slide 1 -->
-                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0">
-                                        <div class="h-full w-full px-0 pb-7">
-                                            <div class="relative mb-5 w-16 h-16">
+                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0 px-1">
+                                        <div class="h-full w-full pb-7">
+                                            <div class="relative mb-5 w-12 h-12 sm:w-16 sm:h-16">
                                                 <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <circle cx="32" cy="32" r="30" stroke="#000" stroke-width="2"
@@ -452,10 +455,10 @@
                                                 </svg>
                                             </div>
                                             <h4
-                                                class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium border-t-4 border-black/20 pt-5">
+                                                class="font-sans text-lg sm:text-xl leading-7 sm:leading-8 font-medium border-t-4 border-black/20 pt-5">
                                                 Third-party APIs like eBay, Amazon and others
                                             </h4>
-                                            <p class="text-base leading-6 my-2">
+                                            <p class="text-sm sm:text-base leading-6 my-2">
                                                 Major retailers have gained significant leverage as both customers and
                                                 competitors, controlling shelf space, pricing, and consumer data while
                                                 expanding sophisticated private label portfolios that directly compete
@@ -465,9 +468,9 @@
                                     </div>
 
                                     <!-- Slide 2 -->
-                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0">
-                                        <div class="h-full w-full px-0 pb-7">
-                                            <div class="relative mb-5 w-16 h-16">
+                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0 px-1">
+                                        <div class="h-full w-full pb-7">
+                                            <div class="relative mb-5 w-12 h-12 sm:w-16 sm:h-16">
                                                 <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <rect x="12" y="12" width="40" height="40" stroke="#000"
@@ -481,10 +484,10 @@
                                                 </svg>
                                             </div>
                                             <h4
-                                                class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium border-t-4 border-black/20 pt-5">
+                                                class="font-sans text-lg sm:text-xl leading-7 sm:leading-8 font-medium border-t-4 border-black/20 pt-5">
                                                 Margin compression
                                             </h4>
-                                            <p class="text-base leading-6 my-2">
+                                            <p class="text-sm sm:text-base leading-6 my-2">
                                                 Persistent inflation and scarcity in raw materials, labor, and logistics
                                                 have severely compressed margins while creating supply availability
                                                 risks, yet consumer price sensitivity and competitive pressure limit
@@ -495,9 +498,9 @@
                                     </div>
 
                                     <!-- Slide 3 -->
-                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0">
-                                        <div class="h-full w-full px-0 pb-7">
-                                            <div class="relative mb-5 w-16 h-16">
+                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0 px-1">
+                                        <div class="h-full w-full pb-7">
+                                            <div class="relative mb-5 w-12 h-12 sm:w-16 sm:h-16">
                                                 <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M32 12 L32 52" stroke="#000" stroke-width="2" />
@@ -509,10 +512,10 @@
                                                 </svg>
                                             </div>
                                             <h4
-                                                class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium border-t-4 border-black/20 pt-5">
+                                                class="font-sans text-lg sm:text-xl leading-7 sm:leading-8 font-medium border-t-4 border-black/20 pt-5">
                                                 Technology capability divergence
                                             </h4>
-                                            <p class="text-base leading-6 my-2">
+                                            <p class="text-sm sm:text-base leading-6 my-2">
                                                 Widening technology capability gaps have significantly reshaped the
                                                 competitive landscape, forcing companies to accelerate digital
                                                 transformation while managing operational complexity and integration
@@ -522,9 +525,9 @@
                                     </div>
 
                                     <!-- Slide 4 -->
-                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0">
-                                        <div class="h-full w-full px-0 pb-7">
-                                            <div class="relative mb-5 w-16 h-16">
+                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0 px-1">
+                                        <div class="h-full w-full pb-7">
+                                            <div class="relative mb-5 w-12 h-12 sm:w-16 sm:h-16">
                                                 <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <circle cx="32" cy="20" r="8" stroke="#000" stroke-width="2"
@@ -540,10 +543,10 @@
                                                 </svg>
                                             </div>
                                             <h4
-                                                class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium border-t-4 border-black/20 pt-5">
+                                                class="font-sans text-lg sm:text-xl leading-7 sm:leading-8 font-medium border-t-4 border-black/20 pt-5">
                                                 Diverging stakeholder expectations
                                             </h4>
-                                            <p class="text-base leading-6 my-2">
+                                            <p class="text-sm sm:text-base leading-6 my-2">
                                                 Conflicting stakeholder expectations have created impossible operational
                                                 tensions, as customers demand lower prices and greater sustainability
                                                 while employees expect higher wages and workplace flexibility, forcing
@@ -557,26 +560,31 @@
 
                             <!-- Carousel Dots -->
                             <div class="flex items-center justify-center mt-4">
-                                <ul class="flex gap-4" id="carouselDots">
-                                    <li><button class="w-4 h-4 cursor-pointer rounded-full dot active" data-slide="0"
-                                            aria-label="Go to slide 1"></button></li>
-                                    <li><button class="w-4 h-4 cursor-pointer rounded-full dot bg-black/30"
+                                <ul class="flex gap-3 sm:gap-4" id="carouselDots">
+                                    <li><button class="w-3 h-3 sm:w-4 sm:h-4 cursor-pointer rounded-full dot active"
+                                            data-slide="0" aria-label="Go to slide 1"></button></li>
+                                    <li><button
+                                            class="w-3 h-3 sm:w-4 sm:h-4 cursor-pointer rounded-full dot bg-black/30"
                                             data-slide="1" aria-label="Go to slide 2"></button></li>
-                                    <li><button class="w-4 h-4 cursor-pointer rounded-full dot bg-black/30"
+                                    <li><button
+                                            class="w-3 h-3 sm:w-4 sm:h-4 cursor-pointer rounded-full dot bg-black/30"
                                             data-slide="2" aria-label="Go to slide 3"></button></li>
-                                    <li><button class="w-4 h-4 cursor-pointer rounded-full dot bg-black/30"
+                                    <li><button
+                                            class="w-3 h-3 sm:w-4 sm:h-4 cursor-pointer rounded-full dot bg-black/30"
                                             data-slide="3" aria-label="Go to slide 4"></button></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-span-3 flex lg:order-2">
                     <div class="flex w-full items-center lg:ml-auto">
                         <div class="relative w-full overflow-hidden lg:rounded-bl-3xl"
-                            style="height: 100%; min-height: 600px;">
+                            style="height: 100%; min-height: 400px;">
                             <img alt="Consumer products market" loading="lazy" class="w-full h-full object-cover"
-                                style="min-height: 600px;" src="../assets/images/retail2.jpg">
+                                style="min-height: 400px;"
+                                src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&h=600&fit=crop">
                         </div>
                     </div>
                 </div>
@@ -698,75 +706,121 @@
 
 
     </main>
-        <footer class="footer-main">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3>About US</h3>
-                        <ul>
-                            <li><a href="../aboutus/ourvalues.html">Our Values</a></li>
-                            <li><a href="../aboutus/ourapproach.html">Our Approach</a></li>
-                            <li><a href="../aboutus/vision.html">Vision</a></li>
-                            <li><a href="../aboutus/careers.html">Careers</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Services</h3>
-                        <ul>
-                            <li><a href="../services/capabilitydevelopment.html">Capability Development</a></li>
-                            <li><a href="../services/costmanagement.html">Cost Management & Reduction</a></li>
-                            <li><a href="../services/newproduct.html">New Product & Service Development</a></li>
-                            <li><a href="../services/postmerger.html">Post Merger Integration</a></li>
-                            <li><a href="../services/procurementstrategic.html">Procurement & Strategic Sourcing</a></li>
-                            <li><a href="../services/sharedservices.html">Shared Services</a></li>
-                            <li><a href="../services/technologysolution.html">Technology Solutions</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-section">
-                        <h3>Technology Solution</h3>
-                        <ul>
-                            <li><a href="../technologysolutions/sap.html">SAP</a></li>
-                            <li><a href="../technologysolutions/oracle.html">Oracle</a></li>
-                            <li><a href="../technologysolutions/microsoft.html">Microsoft</a></li>
-                            <li><a href="../technologysolutions/analytics.html">Analytics</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer-section">
-                        <h3>Industries</h3>
-                        <ul>
-                            <li><a href="energyutilities.html">Energy & Utilities</a></li>
-                            <li><a href="financialservices.html">Financial Services</a></li>
-                            <li><a href="mediaentertainment.html">Media & Entertainment</a></li>
-                            <li><a href="retailconsumer.html">Retail & Customer</a></li>
-                            <li><a href="technology.html">Technology</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Expertise</h3>
-                        <ul>
-                            <li><a href="../expertise/analyticsreporting.html">Analytics Reporting</a></li>
-                            <li><a href="../expertise/changemanagement.html">Change Management</a></li>
-                            <li><a href="../expertise/operationalstrategy.html">Operational Strategy</a></li>
-                            <li><a href="../expertise/processengineering.html">Process Engineering</a></li>
-                            <li><a href="../expertise/programprojectmanagement.html">Program & Project Management</a>
-                            </li>
-                            <li><a href="../expertise/systemsimplementation.html">Systems Implementation</a></li>
-                            <li><a href="../expertise/training.html">Training</a></li>
-
-                        </ul>
-                    </div>
-
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About US</h3>
+                    <ul>
+                        <li><a href="../aboutus/ourvalues.html">Our Values</a></li>
+                        <li><a href="../aboutus/ourapproach.html">Our Approach</a></li>
+                        <li><a href="../aboutus/vision.html">Vision</a></li>
+                        <li><a href="../aboutus/careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="../services/capabilitydevelopment.html">Capability Development</a></li>
+                        <li><a href="../services/costmanagement.html">Cost Management & Reduction</a></li>
+                        <li><a href="../services/newproduct.html">New Product & Service Development</a></li>
+                        <li><a href="../services/postmerger.html">Post Merger Integration</a></li>
+                        <li><a href="../services/procurementstrategic.html">Procurement & Strategic Sourcing</a></li>
+                        <li><a href="../services/sharedservices.html">Shared Services</a></li>
+                        <li><a href="../services/technologysolution.html">Technology Solutions</a></li>
+                    </ul>
                 </div>
 
-                <div class="footer-bottom">
-                    <p class="copyright-text">© Aadrika Global Info Solutions</p>
+                <div class="footer-section">
+                    <h3>Technology Solution</h3>
+                    <ul>
+                        <li><a href="../technologysolutions/sap.html">SAP</a></li>
+                        <li><a href="../technologysolutions/oracle.html">Oracle</a></li>
+                        <li><a href="../technologysolutions/microsoft.html">Microsoft</a></li>
+                        <li><a href="../technologysolutions/analytics.html">Analytics</a></li>
+                    </ul>
                 </div>
+
+                <div class="footer-section">
+                    <h3>Industries</h3>
+                    <ul>
+                        <li><a href="energyutilities.html">Energy & Utilities</a></li>
+                        <li><a href="financialservices.html">Financial Services</a></li>
+                        <li><a href="mediaentertainment.html">Media & Entertainment</a></li>
+                        <li><a href="retailconsumer.html">Retail & Customer</a></li>
+                        <li><a href="technology.html">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Expertise</h3>
+                    <ul>
+                        <li><a href="../expertise/analyticsreporting.html">Analytics Reporting</a></li>
+                        <li><a href="../expertise/changemanagement.html">Change Management</a></li>
+                        <li><a href="../expertise/operationalstrategy.html">Operational Strategy</a></li>
+                        <li><a href="../expertise/processengineering.html">Process Engineering</a></li>
+                        <li><a href="../expertise/programprojectmanagement.html">Program & Project Management</a>
+                        </li>
+                        <li><a href="../expertise/systemsimplementation.html">Systems Implementation</a></li>
+                        <li><a href="../expertise/training.html">Training</a></li>
+
+                    </ul>
+                </div>
+
             </div>
-        </footer>
+
+            <div class="footer-bottom">
+                <p class="copyright-text">© Aadrika Global Info Solutions</p>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 <script src="../script.js"></script>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#carouselSlides > div');
+    const dots = document.querySelectorAll('.dot');
+    const slidesContainer = document.getElementById('carouselSlides');
+
+    function goToSlide(index) {
+        currentSlide = index;
+        slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        dots.forEach((dot, i) => {
+            if (i === currentSlide) {
+                dot.classList.add('active');
+                dot.style.backgroundColor = '#000';
+            } else {
+                dot.classList.remove('active');
+                dot.style.backgroundColor = 'rgba(0, 0, 0, 0.3)';
+            }
+        });
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    slidesContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    slidesContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50 && currentSlide < slides.length - 1) {
+            goToSlide(currentSlide + 1);
+        }
+        if (touchEndX > touchStartX + 50 && currentSlide > 0) {
+            goToSlide(currentSlide - 1);
+        }
+    }
+</script>
 
 </html>
