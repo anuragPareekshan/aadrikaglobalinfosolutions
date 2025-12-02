@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle Solutions - Aadrika Global Info Solution</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../assets/images/logo.jpg" type="image/jpg">
+    <link href="../style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'aadrika-blue': '#003B5C',
+                        'amber': '#F59E0B',
+                        'palladium-50': '#F5F5F5',
+                        'black-100': '#F9FAFB',
+                        'black-200': '#E5E7EB',
+                        'black-300': '#D1D5DB',
+                        'ice-blue': '#E0F2FE',
+                        'white-100': '#F3F4F6'
+                    },
+                    fontFamily: {
+                        'sans': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'sans-title': ['Georgia', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+    <header id="mainHeader" class="fixed top-0 left-0 z-50 w-full text-white transition-all duration-700">
+        <div class="container mx-auto flex items-center justify-between px-5 py-3 lg:h-[100px] lg:px-8 lg:py-0">
+            <a href="/" class="-ml-4 shrink-0 lg:-ml-8">
+                <img src="/assets/images/logo.jpg" alt="Aadrika Logo" class="h-[43px] w-auto lg:h-[85px]"
+                    style="mix-blend-mode: luminosity; ">
+            </a>
+            <div class="flex items-center gap-2 lg:hidden">
+                <button id="mobileMenuBtn"
+                    class="hamburger relative flex h-[34px] w-[34px] cursor-pointer flex-col items-center justify-center">
+                    <div class="hamburger-line absolute top-[10px] h-[2px] w-full bg-white"></div>
+                    <div class="hamburger-line absolute top-1/2 h-[2px] w-full -translate-y-1/2 bg-white"></div>
+                    <div class="hamburger-line absolute bottom-[10px] h-[2px] w-full bg-white"></div>
+                </button>
+                <a href="/contact.html"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-amber bg-amber px-5 py-1.5 text-sm font-medium text-white transition-colors hover:bg-white hover:text-aadrika-blue">
+                    Contact
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            Industries
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/industries/retail-consumer.html" class="mega-link">Retail
+                                & Consumer</a>
+                            <a href="/industries/financial-services.html" class="mega-link">Financial Services</a>
+                            <a href="/industries/energy-utilities.html" class="mega-link">Energy & Utilities</a>
+                            <a href="/industries/media-entertainment.html" class="mega-link">Media & Entertainment</a>
+                            <a href="/industries/technology.html" class="mega-link">Technology</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            Services
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/services/capability-development.html" class="mega-link">Capability Development</a>
+                            <a href="/services/cost-management.html" class="mega-link">Cost Management & Reduction</a>
+                            <a href="/services/new-product.html" class="mega-link">New Product & Service
+                                Development</a>
+                            <a href="/services/post-merger.html" class="mega-link">Post Merger Integration</a>
+                            <a href="/services/procurement-strategic.html" class="mega-link">Procurement & Strategic
+                                Sourcing</a>
+                            <a href="/services/shared-services.html" class="mega-link">Shared Services</a>
+                            <a href="/services/technology-solution.html" class="mega-link">Technology Solutions</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            Technology Solutions
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/technologySolution/sap.html" class="mega-link">SAP</a>
+                            <a href="/technologySolution/oracle.html" class="mega-link">Oracle</a>
+                            <a href="/technologySolution/analytics.html" class="mega-link">Analytics</a>
+                            <a href="/technologySolution/microsoft.html" class="mega-link">Microsoft</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            Expertise
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/expertise/analytics-reporting.html" class="mega-link">Analytics & Reporting</a>
+                            <a href="/expertise/change-management.html" class="mega-link">Change Management</a>
+                            <a href="/expertise/operational-strategy.html" class="mega-link">Operational Strategy</a>
+                            <a href="/expertise/process-engineering.html" class="mega-link">Process Engineering</a>
+                            <a href="/expertise/program-project-management.html" class="mega-link">Program & Project
+                                Management</a>
+                            <a href="/expertise/systems-implementation.html" class="mega-link">Systems
+                                Implementation</a>
+                            <a href="/expertise/training.html" class="mega-link">Training</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            About Us
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/aboutUS/ourvalues.html" class="mega-link">Our Values</a>
+                            <a href="/aboutUS/ourapproach.html" class="mega-link">Our Approach</a>
+                            <a href="/aboutUS/vision.html" class="mega-link">Vision</a>
+                            <a href="/aboutUS/careers.html" class="mega-link">Careers</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="/contact.html" class="btn-contact ms-5">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 z-40 h-full w-full bg-aadrika-blue lg:hidden">
+        <div class="flex h-full flex-col p-8 pt-24">
+            <nav class="flex-1 overflow-y-auto">
+                <ul class="flex flex-col gap-6">
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>Industries</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/industries/retail-consumer.html" class="block py-2 text-base text-white/80">Retail
+                                & Consumer</a>
+                            <a href="/industries/financial-services.html"
+                                class="block py-2 text-base text-white/80">Financial Services</a>
+                            <a href="/industries/energy-utilities.html"
+                                class="block py-2 text-base text-white/80">Energy & Utilities</a>
+                            <a href="/industries/media-entertainment.html"
+                                class="block py-2 text-base text-white/80">Media & Entertainment</a>
+                            <a href="/industries/technology.html"
+                                class="block py-2 text-base text-white/80">Technology</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>Services</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/services/capability-development.html"
+                                class="block py-2 text-base text-white/80">Capability Development</a>
+                            <a href="/services/cost-management.html" class="block py-2 text-base text-white/80">Cost
+                                Management & Reduction</a>
+                            <a href="/services/new-product.html" class="block py-2 text-base text-white/80">New Product
+                                & Service Development</a>
+                            <a href="/services/post-merger.html" class="block py-2 text-base text-white/80">Post Merger
+                                Integration</a>
+                            <a href="/services/procurement-strategic.html"
+                                class="block py-2 text-base text-white/80">Procurement & Strategic Sourcing</a>
+                            <a href="/services/shared-services.html" class="block py-2 text-base text-white/80">Shared
+                                Services</a>
+                            <a href="/services/technology-solution.html"
+                                class="block py-2 text-base text-white/80">Technology Solutions</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>Technology Solutions</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/technologySolution/sap.html" class="block py-2 text-base text-white/80">SAP</a>
+                            <a href="/technologySolution/oracle.html"
+                                class="block py-2 text-base text-white/80">Oracle</a>
+                            <a href="/technologySolution/analytics.html"
+                                class="block py-2 text-base text-white/80">Analytics</a>
+                            <a href="/technologySolution/microsoft.html"
+                                class="block py-2 text-base text-white/80">Microsoft</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>Expertise</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/expertise/analytics-reporting.html"
+                                class="block py-2 text-base text-white/80">Analytics & Reporting</a>
+                            <a href="/expertise/change-management.html"
+                                class="block py-2 text-base text-white/80">Change Management</a>
+                            <a href="/expertise/operational-strategy.html"
+                                class="block py-2 text-base text-white/80">Operational Strategy</a>
+                            <a href="/expertise/process-engineering.html"
+                                class="block py-2 text-base text-white/80">Process Engineering</a>
+                            <a href="/expertise/program-project-management.html"
+                                class="block py-2 text-base text-white/80">Program & Project Management</a>
+                            <a href="/expertise/systems-implementation.html"
+                                class="block py-2 text-base text-white/80">Systems Implementation</a>
+                            <a href="/expertise/training.html" class="block py-2 text-base text-white/80">Training</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>About Us</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/aboutUS/ourvalues.html" class="block py-2 text-base text-white/80">Our Values</a>
+                            <a href="/aboutUS/ourapproach.html" class="block py-2 text-base text-white/80">Our
+                                Approach</a>
+                            <a href="/aboutUS/vision.html" class="block py-2 text-base text-white/80">Vision</a>
+                            <a href="/aboutUS/careers.html" class="block py-2 text-base text-white/80">Careers</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="relative flex-1">
+        <!-- Hero Section -->
+        <section class="parallax-container relative min-h-screen text-white">
+            <div class="absolute inset-0 z-0">
+                <img src="/assets/images/test-hero-home.jpg" alt="Oracle Solutions Hero"
+                    class="h-full w-full object-cover">
+                <div class="gradient-overlay absolute inset-0"></div>
+            </div>
+
+            <div class="relative z-10 flex min-h-screen items-center">
+                <div class="container mx-auto px-5 lg:px-8">
+                    <div class="max-w-[800px] mx-auto py-12 lg:py-24 fade-in-up text-center">
+                        <h1 class="font-sans-title text-4xl lg:text-5xl font-semibold leading-tight mb-6">
+                            Oracle Solutions
+                        </h1>
+                        <p class="text-base lg:text-lg">
+                            Aadrika Global delivers comprehensive Oracle expertise spanning database development, DBA
+                            services, clustering, implementation, and high availability solutions. Our experienced team
+                            provides complete lifecycle support for Oracle Database products.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="bg-white text-black">
+            <div class="flex flex-col lg:grid lg:grid-cols-6">
+                <!-- Content Column -->
+                <div class="col-span-3 flex lg:order-1 lg:ml-auto">
+                    <div
+                        class="order-none flex h-full w-full flex-col px-[18px] max-lg:container lg:mx-0 pr-custom mx-auto pt-12 pb-12 lg:px-8 lg:pt-24 lg:pb-24 lg:ml-auto">
+                        <p class="text-base leading-6 mb-5"></p>
+                        <h2
+                            class="font-sans-title text-[1.875rem] lg:text-[2.625rem] leading-[3.625rem] font-medium mb-5">
+                            Complete Oracle Database Lifecycle Implementation
+                        </h2>
+
+                        <!-- Desktop View - Vertical Timeline -->
+                        <div class="ml-20 flex flex-col border-l border-black/20 max-lg:hidden">
+                            <div class="relative p-7">
+                                <div class="absolute top-9 right-full mr-3">
+                                    <div class="relative w-16 h-16">
+                                        <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="32" cy="32" r="30" stroke="#000" stroke-width="2" fill="none" />
+                                            <path d="M20 32 L28 40 L44 24" stroke="#000" stroke-width="3" fill="none"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h4 class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium">
+                                    Expert Database Development & Management
+                                </h4>
+                                <p class="text-base leading-6 my-2">
+                                    Our technical team brings extensive experience in database management and PL/SQL
+                                    programming, delivering robust application development solutions. We provide remote
+                                    database server setup and management services, ensuring optimal performance and
+                                    reliability for your Oracle infrastructure.
+                                </p>
+                            </div>
+
+                            <div class="relative p-7">
+                                <div class="absolute top-9 right-full mr-3">
+                                    <div class="relative w-16 h-16">
+                                        <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="12" y="12" width="40" height="40" stroke="#000" stroke-width="2"
+                                                fill="none" rx="4" />
+                                            <circle cx="24" cy="24" r="4" fill="#000" />
+                                            <circle cx="40" cy="24" r="4" fill="#000" />
+                                            <circle cx="24" cy="40" r="4" fill="#000" />
+                                            <circle cx="40" cy="40" r="4" fill="#000" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h4 class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium">
+                                    High Performance & Availability
+                                </h4>
+                                <p class="text-base leading-6 my-2">
+                                    We specialize in Oracle clustering, performance tuning, and disaster management
+                                    solutions. Our expertise ensures your database systems maintain peak performance
+                                    with comprehensive backup, recovery, and scheduling capabilities to minimize
+                                    downtime and protect critical business data.
+                                </p>
+                            </div>
+
+                            <div class="relative p-7">
+                                <div class="absolute top-9 right-full mr-3">
+                                    <div class="relative w-16 h-16">
+                                        <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M32 8 L56 24 L56 48 L32 56 L8 48 L8 24 Z" stroke="#000"
+                                                stroke-width="2" fill="none" />
+                                            <circle cx="32" cy="32" r="8" fill="#000" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <h4 class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium">
+                                    Modern Application Integration
+                                </h4>
+                                <p class="text-base leading-6 my-2">
+                                    From Oracle Forms & Reports to mobile/PDA applications and .NET integration, we
+                                    deliver comprehensive development solutions. Our team excels in data synchronization
+                                    across distributed databases and implementing Oracle Data Integrator (ODI) for
+                                    seamless enterprise data workflows.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Mobile View - Carousel -->
+                        <div class="relative lg:hidden" role="region" aria-roledescription="carousel">
+                            <div class="overflow-hidden">
+                                <div id="carouselSlides" class="flex carousel-slide" style="transform: translateX(0%);">
+                                    <!-- Slide 1 -->
+                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0">
+                                        <div class="h-full w-full px-0 pb-7">
+                                            <div class="relative mb-5 w-16 h-16">
+                                                <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="32" cy="32" r="30" stroke="#000" stroke-width="2"
+                                                        fill="none" />
+                                                    <path d="M20 32 L28 40 L44 24" stroke="#000" stroke-width="3"
+                                                        fill="none" stroke-linecap="round" stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                            <h4
+                                                class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium border-t-4 border-black/20 pt-5">
+                                                Expert Database Development & Management
+                                            </h4>
+                                            <p class="text-base leading-6 my-2">
+                                                Our technical team brings extensive experience in database management
+                                                and PL/SQL programming, delivering robust application development
+                                                solutions. We provide remote database server setup and management
+                                                services, ensuring optimal performance and reliability for your Oracle
+                                                infrastructure.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 2 -->
+                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0">
+                                        <div class="h-full w-full px-0 pb-7">
+                                            <div class="relative mb-5 w-16 h-16">
+                                                <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <rect x="12" y="12" width="40" height="40" stroke="#000"
+                                                        stroke-width="2" fill="none" rx="4" />
+                                                    <circle cx="24" cy="24" r="4" fill="#000" />
+                                                    <circle cx="40" cy="24" r="4" fill="#000" />
+                                                    <circle cx="24" cy="40" r="4" fill="#000" />
+                                                    <circle cx="40" cy="40" r="4" fill="#000" />
+                                                </svg>
+                                            </div>
+                                            <h4
+                                                class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium border-t-4 border-black/20 pt-5">
+                                                High Performance & Availability
+                                            </h4>
+                                            <p class="text-base leading-6 my-2">
+                                                We specialize in Oracle clustering, performance tuning, and disaster
+                                                management solutions. Our expertise ensures your database systems
+                                                maintain peak performance with comprehensive backup, recovery, and
+                                                scheduling capabilities to minimize downtime and protect critical
+                                                business data.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Slide 3 -->
+                                    <div role="group" aria-roledescription="slide" class="min-w-full shrink-0">
+                                        <div class="h-full w-full px-0 pb-7">
+                                            <div class="relative mb-5 w-16 h-16">
+                                                <svg class="w-full h-full" viewBox="0 0 64 64" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M32 8 L56 24 L56 48 L32 56 L8 48 L8 24 Z" stroke="#000"
+                                                        stroke-width="2" fill="none" />
+                                                    <circle cx="32" cy="32" r="8" fill="#000" />
+                                                </svg>
+                                            </div>
+                                            <h4
+                                                class="font-sans-title text-[1.25rem] lg:text-[1.375rem] leading-8 font-medium border-t-4 border-black/20 pt-5">
+                                                Modern Application Integration
+                                            </h4>
+                                            <p class="text-base leading-6 my-2">
+                                                From Oracle Forms & Reports to mobile/PDA applications and .NET
+                                                integration, we deliver comprehensive development solutions. Our team
+                                                excels in data synchronization across distributed databases and
+                                                implementing Oracle Data Integrator (ODI) for seamless enterprise data
+                                                workflows.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Carousel Dots -->
+                            <div class="flex items-center justify-center mt-4">
+                                <ul class="flex gap-4" id="carouselDots">
+                                    <li><button class="w-4 h-4 cursor-pointer rounded-full dot active" data-slide="0"
+                                            aria-label="Go to slide 1"></button></li>
+                                    <li><button class="w-4 h-4 cursor-pointer rounded-full dot" data-slide="1"
+                                            aria-label="Go to slide 2"></button></li>
+                                    <li><button class="w-4 h-4 cursor-pointer rounded-full dot" data-slide="2"
+                                            aria-label="Go to slide 3"></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Column -->
+                <div class="col-span-3 flex lg:order-2">
+                    <div class="flex w-full items-center lg:ml-auto">
+                        <div class="relative w-full overflow-hidden lg:rounded-bl-3xl"
+                            style="height: 100%; min-height: 600px;">
+                            <img alt="Oracle Database Solutions" loading="lazy" class="w-full h-full object-cover"
+                                style="min-height: 600px;" src="/assets/images/services.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid Section -->
+        <section class="bg-palladium-50 text-black">
+            <div class="container mx-auto px-[18px] pt-12 pb-12 lg:px-8 lg:pt-24 lg:pb-24 relative z-10">
+                <div class="flex flex-col gap-5 lg:text-center">
+                    <h2 class="text-[1.875rem] lg:text-[2.625rem] leading-[3.625rem] font-medium">
+                        Our Oracle Expertise
+                    </h2>
+
+                    <div class="mt-3 grid gap-5 grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+                        <!-- Card 1 -->
+                        <div
+                            class="border-ice-blue rounded-[10px] border p-10 text-left bg-white text-black card-hover">
+                            <h4 class="text-[1.25rem] lg:text-[1.375rem] leading-[2rem] font-medium mb-3">
+                                Oracle Database Application Development
+                            </h4>
+                            <p class="text-[1rem] leading-[1.5rem] my-2">
+                                Complete lifecycle implementation for Oracle Database products with expert application
+                                development services tailored to your business needs.
+                            </p>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div
+                            class="border-ice-blue rounded-[10px] border p-10 text-left bg-white text-black card-hover">
+                            <h4 class="text-[1.25rem] lg:text-[1.375rem] leading-[2rem] font-medium mb-3">
+                                Oracle Database Performance Tuning
+                            </h4>
+                            <p class="text-[1rem] leading-[1.5rem] my-2">
+                                Optimize your database performance with our expert tuning services, ensuring maximum
+                                efficiency and responsiveness for your applications.
+                            </p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div
+                            class="border-ice-blue rounded-[10px] border p-10 text-left bg-white text-black card-hover">
+                            <h4 class="text-[1.25rem] lg:text-[1.375rem] leading-[2rem] font-medium mb-3">
+                                Oracle Forms & Reports
+                            </h4>
+                            <p class="text-[1rem] leading-[1.5rem] my-2">
+                                Develop and maintain robust Oracle Forms and Reports applications with our experienced
+                                development team.
+                            </p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div
+                            class="border-ice-blue rounded-[10px] border p-10 text-left bg-white text-black card-hover">
+                            <h4 class="text-[1.25rem] lg:text-[1.375rem] leading-[2rem] font-medium mb-3">
+                                Mobile / PDA Application Development
+                            </h4>
+                            <p class="text-[1rem] leading-[1.5rem] my-2">
+                                Build powerful mobile and PDA applications integrated with Oracle databases for seamless
+                                data access on the go.
+                            </p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div
+                            class="border-ice-blue rounded-[10px] border p-10 text-left bg-white text-black card-hover">
+                            <h4 class="text-[1.25rem] lg:text-[1.375rem] leading-[2rem] font-medium mb-3">
+                                Oracle Disaster Management
+                            </h4>
+                            <p class="text-[1rem] leading-[1.5rem] my-2">
+                                Comprehensive disaster recovery solutions including database backup, recovery
+                                strategies, and task scheduling to protect your critical data.
+                            </p>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div
+                            class="border-ice-blue rounded-[10px] border p-10 text-left bg-white text-black card-hover">
+                            <h4 class="text-[1.25rem] lg:text-[1.375rem] leading-[2rem] font-medium mb-3">
+                                .NET Application for Oracle Database
+                            </h4>
+                            <p class="text-[1rem] leading-[1.5rem] my-2">
+                                Seamlessly integrate Oracle databases with .NET applications for modern, scalable
+                                enterprise solutions.
+                            </p>
+                        </div>
+
+                        <!-- Card 7 -->
+                        <div
+                            class="border-ice-blue rounded-[10px] border p-10 text-left bg-white text-black card-hover">
+                            <h4 class="text-[1.25rem] lg:text-[1.375rem] leading-[2rem] font-medium mb-3">
+                                Data Synchronization
+                            </h4>
+                            <p class="text-[1rem] leading-[1.5rem] my-2">
+                                Implement robust data synchronization solutions between distributed Oracle database
+                                systems for real-time data consistency.
+                            </p>
+                        </div>
+
+                        <!-- Card 8 -->
+                        <div
+                            class="border-ice-blue rounded-[10px] border p-10 text-left bg-white text-black card-hover">
+                            <h4 class="text-[1.25rem] lg:text-[1.375rem] leading-[2rem] font-medium mb-3">
+                                PL/SQL Programming
+                            </h4>
+                            <p class="text-[1rem] leading-[1.5rem] my-2">
+                                Expert PL/SQL development services with strong programming expertise to build efficient
+                                database procedures, functions, and triggers.
+                            </p>
+                        </div>
+
+                        <!-- Card 9 -->
+                        <div
+                            class="border-ice-blue rounded-[10px] border p-10 text-left bg-white text-black card-hover">
+                            <h4 class="text-[1.25rem] lg:text-[1.375rem] leading-[2rem] font-medium mb-3">
+                                Oracle Data Integrator (ODI)
+                            </h4>
+                            <p class="text-[1rem] leading-[1.5rem] my-2">
+                                Leverage ODI for comprehensive data integration, transformation, and loading solutions
+                                across your enterprise systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About US</h3>
+                    <ul>
+                        <li><a href="/aboutUS/ourvalues.html">Our Values</a></li>
+                        <li><a href="/aboutUS/ourapproach.html">Our Approach</a></li>
+                        <li><a href="/aboutUS/vision.html">Vision</a></li>
+                        <li><a href="/aboutUS/careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="/services/capability-development.html">Capability Development</a></li>
+                        <li><a href="/services/cost-management.html">Cost Management & Reduction</a></li>
+                        <li><a href="/services/new-product.html">New Product & Service Development</a></li>
+                        <li><a href="/services/post-merger.html">Post Merger Integration</a></li>
+                        <li><a href="/services/procurement-strategic.html">Procurement & Strategic Sourcing</a></li>
+                        <li><a href="/services/shared-services.html">Shared Services</a></li>
+                        <li><a href="/services/technology-solution.html">Technology Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Technology Solution</h3>
+                    <ul>
+                        <li><a href="/technologySolution/sap.html">SAP</a></li>
+                        <li><a href="/technologySolution/oracle.html">Oracle</a></li>
+                        <li><a href="/technologySolution/microsoft.html">Microsoft</a></li>
+                        <li><a href="/technologySolution/analytics.html">Analytics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Industries</h3>
+                    <ul>
+                        <li><a href="/industries/energy-utilities.html">Energy & Utilities</a></li>
+                        <li><a href="/industries/financial-services.html">Financial Services</a></li>
+                        <li><a href="/industries/media-entertainment.html">Media & Entertainment</a></li>
+                        <li><a href="/industries/retail-consumer.html">Retail & Customer</a></li>
+                        <li><a href="/industries/technology.html">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Expertise</h3>
+                    <ul>
+                        <li><a href="/expertise/analytics-reporting.html">Analytics Reporting</a></li>
+                        <li><a href="/expertise/change-management.html">Change Management</a></li>
+                        <li><a href="/expertise/operational-strategy.html">Operational Strategy</a></li>
+                        <li><a href="/expertise/process-engineering.html">Process Engineering</a></li>
+                        <li><a href="/expertise/program-project-management.html">Program & Project Management</a></li>
+                        <li><a href="/expertise/systems-implementation.html">Analytics</a></li>
+                        <li><a href="/expertise/training.html">Training</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright-text">© Aadrika Global Info Solutions</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="/script.js"></script>
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('#carouselSlides > div');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slides.length;
+
+    function goToSlide(index) {
+        currentSlide = index;
+        const offset = -100 * currentSlide;
+        document.getElementById('carouselSlides').style.transform = `translateX(${offset}%)`;
+
+        dots.forEach((dot, i) => {
+            if (i === currentSlide) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    // Auto-advance carousel every 5 seconds
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+    }, 5000);
+</script>
+
+</html>

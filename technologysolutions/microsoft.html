@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft - Aadrika Global Info Solution</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../assets/images/logo.jpg" type="image/jpg">
+    <link href="../style.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'aadrika-blue': '#003B5C',
+                        'amber': '#F59E0B',
+                        'palladium-50': '#F5F5F5',
+                        'black-100': '#F9FAFB',
+                        'black-200': '#E5E7EB',
+                        'black-300': '#D1D5DB',
+                        'ice-blue': '#E0F2FE',
+                        'white-100': '#F3F4F6'
+                    },
+                    fontFamily: {
+                        'sans': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        'sans-title': ['Georgia', 'Times New Roman', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white">
+    <header id="mainHeader" class="fixed top-0 left-0 z-50 w-full text-white transition-all duration-700">
+        <div class="container mx-auto flex items-center justify-between px-5 py-3 lg:h-[100px] lg:px-8 lg:py-0">
+            <a href="/" class="-ml-4 shrink-0 lg:-ml-8">
+                <img src="/assets/images/logo.jpg" alt="Aadrika Logo" class="h-[43px] w-auto lg:h-[85px]"
+                    style="mix-blend-mode: luminosity; ">
+            </a>
+            <div class="flex items-center gap-2 lg:hidden">
+                <button id="mobileMenuBtn"
+                    class="hamburger relative flex h-[34px] w-[34px] cursor-pointer flex-col items-center justify-center">
+                    <div class="hamburger-line absolute top-[10px] h-[2px] w-full bg-white"></div>
+                    <div class="hamburger-line absolute top-1/2 h-[2px] w-full -translate-y-1/2 bg-white"></div>
+                    <div class="hamburger-line absolute bottom-[10px] h-[2px] w-full bg-white"></div>
+                </button>
+                <a href="contact.html"
+                    class="inline-flex items-center justify-center whitespace-nowrap rounded-full border border-amber bg-amber px-5 py-1.5 text-sm font-medium text-white transition-colors hover:bg-white hover:text-aadrika-blue">
+                    Contact
+                </a>
+            </div>
+            <nav class="desktop-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            Industries
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/industries/retail-consumer.html" class="mega-link">Retail
+                                & Consumer</a>
+                            <a href="/industries/financial-services.html" class="mega-link">Financial Services</a>
+                            <a href="/industries/energy-utilities.html" class="mega-link">Energy & Utilities</a>
+                            <a href="/industries/media-entertainment.html" class="mega-link">Media & Entertainment</a>
+                            <a href="/industries/technology.html" class="mega-link">Technology</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            Services
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/services/capability-development.html" class="mega-link">Capability Development</a>
+                            <a href="/services/cost-management.html" class="mega-link">Cost Management & Reduction</a>
+                            <a href="/services/new-product.html" class="mega-link">New Product & Service
+                                Development</a>
+                            <a href="/services/post-merger.html" class="mega-link">Post Merger Integration</a>
+                            <a href="/services/procurement-strategic.html" class="mega-link">Procurement & Strategic
+                                Sourcing</a>
+                            <a href="/services/shared-services.html" class="mega-link">Shared Services</a>
+                            <a href="/services/technology-solution.html" class="mega-link">Technology Solutions</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            Technology Solutions
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/technologySolution/sap.html" class="mega-link">SAP</a>
+                            <a href="/technologySolution/oracle.html" class="mega-link">Oracle</a>
+                            <a href="/technologySolution/analytics.html" class="mega-link">Analytics</a>
+                            <a href="/technologySolution/microsoft.html" class="mega-link">Microsoft</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            Expertise
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/expertise/analytics-reporting.html" class="mega-link">Analytics & Reporting</a>
+                            <a href="/expertise/change-management.html" class="mega-link">Change Management</a>
+                            <a href="/expertise/operational-strategy.html" class="mega-link">Operational Strategy</a>
+                            <a href="/expertise/process-engineering.html" class="mega-link">Process Engineering</a>
+                            <a href="/expertise/program-project-management.html" class="mega-link">Program & Project
+                                Management</a>
+                            <a href="/expertise/systems-implementation.html" class="mega-link">Systems
+                                Implementation</a>
+                            <a href="/expertise/training.html" class="mega-link">Training</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link-main">
+                            About Us
+                            <svg class="dropdown-icon" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu-custom dropdown-simple">
+                            <a href="/aboutUS/ourvalues.html" class="mega-link">Our Values</a>
+                            <a href="/aboutUS/ourapproach.html" class="mega-link">Our Approach</a>
+                            <a href="/aboutUS/vision.html" class="mega-link">Vision</a>
+                            <a href="/aboutUS/careers.html" class="mega-link">Careers</a>
+                        </div>
+                    </li>
+                </ul>
+                <a href="/contact.html" class="btn-contact ms-5">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 z-40 h-full w-full bg-aadrika-blue lg:hidden">
+        <div class="flex h-full flex-col p-8 pt-24">
+            <nav class="flex-1 overflow-y-auto">
+                <ul class="flex flex-col gap-6">
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>Industries</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/industries/retail-consumer.html" class="block py-2 text-base text-white/80">Retail
+                                & Consumer</a>
+                            <a href="/industries/financial-services.html"
+                                class="block py-2 text-base text-white/80">Financial Services</a>
+                            <a href="/industries/energy-utilities.html"
+                                class="block py-2 text-base text-white/80">Energy & Utilities</a>
+                            <a href="/industries/media-entertainment.html"
+                                class="block py-2 text-base text-white/80">Media & Entertainment</a>
+                            <a href="/industries/technology.html"
+                                class="block py-2 text-base text-white/80">Technology</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>Services</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/services/capability-development.html"
+                                class="block py-2 text-base text-white/80">Capability Development</a>
+                            <a href="/services/cost-management.html" class="block py-2 text-base text-white/80">Cost
+                                Management & Reduction</a>
+                            <a href="/services/new-product.html" class="block py-2 text-base text-white/80">New Product
+                                & Service Development</a>
+                            <a href="/services/post-merger.html" class="block py-2 text-base text-white/80">Post Merger
+                                Integration</a>
+                            <a href="/services/procurement-strategic.html"
+                                class="block py-2 text-base text-white/80">Procurement & Strategic Sourcing</a>
+                            <a href="/services/shared-services.html" class="block py-2 text-base text-white/80">Shared
+                                Services</a>
+                            <a href="/services/technology-solution.html"
+                                class="block py-2 text-base text-white/80">Technology Solutions</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>Technology Solutions</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/technologySolution/sap.html" class="block py-2 text-base text-white/80">SAP</a>
+                            <a href="/technologySolution/oracle.html"
+                                class="block py-2 text-base text-white/80">Oracle</a>
+                            <a href="/technologySolution/analytics.html"
+                                class="block py-2 text-base text-white/80">Analytics</a>
+                            <a href="/technologySolution/microsoft.html"
+                                class="block py-2 text-base text-white/80">Microsoft</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>Expertise</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/expertise/analytics-reporting.html"
+                                class="block py-2 text-base text-white/80">Analytics & Reporting</a>
+                            <a href="/expertise/change-management.html"
+                                class="block py-2 text-base text-white/80">Change Management</a>
+                            <a href="/expertise/operational-strategy.html"
+                                class="block py-2 text-base text-white/80">Operational Strategy</a>
+                            <a href="/expertise/process-engineering.html"
+                                class="block py-2 text-base text-white/80">Process Engineering</a>
+                            <a href="/expertise/program-project-management.html"
+                                class="block py-2 text-base text-white/80">Program & Project Management</a>
+                            <a href="/expertise/systems-implementation.html"
+                                class="block py-2 text-base text-white/80">Systems Implementation</a>
+                            <a href="/expertise/training.html" class="block py-2 text-base text-white/80">Training</a>
+                        </div>
+                    </li>
+                    <li>
+                        <button
+                            class="mobile-dropdown-trigger flex w-full items-center justify-between text-xl text-white">
+                            <span>About Us</span>
+                            <svg class="mobile-dropdown-icon transition-transform duration-300"
+                                style="transform: rotate(90deg);" width="16" height="16" viewBox="0 0 16 16"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M4.64645 1.64645C4.84171 1.45118 5.15829 1.45118 5.35355 1.64645L11.3536 7.64645C11.5488 7.84171 11.5488 8.15829 11.3536 8.35355L5.35355 14.3536C5.15829 14.5488 4.84171 14.5488 4.64645 14.3536C4.45118 14.1583 4.45118 13.8417 4.64645 13.6464L10.2929 8L4.64645 2.35355C4.45118 2.15829 4.45118 1.84171 4.64645 1.64645Z"
+                                    fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <div class="mobile-dropdown-content mt-3 hidden pl-4">
+                            <a href="/aboutUS/ourvalues.html" class="block py-2 text-base text-white/80">Our Values</a>
+                            <a href="/aboutUS/ourapproach.html" class="block py-2 text-base text-white/80">Our
+                                Approach</a>
+                            <a href="/aboutUS/vision.html" class="block py-2 text-base text-white/80">Vision</a>
+                            <a href="/aboutUS/careers.html" class="block py-2 text-base text-white/80">Careers</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="relative flex-1">
+        <section class="parallax-container relative min-h-screen text-white">
+            <div class="absolute inset-0 z-0">
+                <img src="/assets/images/microsoft-solutions.jpg" alt="Microsoft Solutions Hero"
+                    class="h-full w-full object-cover">
+                <div class="gradient-overlay absolute inset-0"
+                    style="background: linear-gradient(135deg, rgba(0, 59, 92, 0.85) 0%, rgba(0, 59, 92, 0.65) 100%);">
+                </div>
+            </div>
+
+            <div class="relative z-10 flex min-h-screen items-center">
+                <div class="container mx-auto px-5 lg:px-8">
+                    <div class="max-w-[640px] py-12 lg:py-24 fade-in-up">
+                        <h1 class="font-sans-title text-4xl lg:text-5xl font-semibold leading-tight mb-4 ml-10 mt-5">
+                            Microsoft Solutions
+                        </h1>
+                        <p class="text-base lg:text-lg font-normal my-6 ml-10 mt-5 italic">
+                            "Advanced and swift solutions based on the Microsoft platform to achieve high performance"
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white text-black">
+            <div class="container mx-auto px-[18px] pt-12 pb-12 lg:px-8 lg:pt-24 lg:pb-24">
+                <div class="max-w-5xl mx-auto">
+                    <div class="mb-12">
+                        <h2 class="font-sans-title text-[1.875rem] lg:text-[2.625rem] leading-tight font-medium mb-6">
+                            Bridging Technology and Business Prospects
+                        </h2>
+                        <p class="text-base lg:text-lg leading-relaxed mb-6">
+                            Aadrika Global offers advanced and swift solutions based on the **Microsoft platform** to
+                            enable clients to achieve **high performance**. Our solutions are built on **industry best
+                            practices** to effectively **bridge the gap between technology and business prospects**.
+                        </p>
+                        <p class="text-base lg:text-lg leading-relaxed">
+                            We have a dedicated team of professionals with core expertise in Microsoft technologies. Our
+                            company provides **robust services and solutions** across Microsoft's product line to
+                            deliver improvements across the entire enterprise, helping clients to **optimize their
+                            business operations** and improve organizational performance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-palladium-50 text-black">
+            <div class="container mx-auto px-[18px] pt-12 pb-12 lg:px-8 lg:pt-24 lg:pb-24">
+                <div class="max-w-6xl mx-auto">
+                    <h2
+                        class="font-sans-title text-[1.875rem] lg:text-[2.625rem] leading-tight font-medium mb-12 text-center">
+                        Key Advantages of Our Microsoft Solutions
+                    </h2>
+
+                    <div class="grid gap-8 grid-cols-1 md:grid-cols-3">
+                        <div class="bg-white rounded-[10px] p-8 text-center">
+                            <div class="mb-6 flex justify-center">
+                                <div class="w-20 h-20 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1.25rem] font-medium mb-3">Agility & Scalability</h4>
+                            <p class="text-base leading-relaxed text-gray-700">
+                                Provide business agility and scalability to your company through our integrated and
+                                efficient approach.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-[10px] p-8 text-center">
+                            <div class="mb-6 flex justify-center">
+                                <div class="w-20 h-20 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1.25rem] font-medium mb-3">Optimized Operations</h4>
+                            <p class="text-base leading-relaxed text-gray-700">
+                                Leverage Microsoft solutions to optimize business operations and significantly improve
+                                organizational performance.
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-[10px] p-8 text-center">
+                            <div class="mb-6 flex justify-center">
+                                <div class="w-20 h-20 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1.25rem] font-medium mb-3">Enterprise Improvement</h4>
+                            <p class="text-base leading-relaxed text-gray-700">
+                                Deliver robust services and solutions across Microsoft's product line to drive
+                                improvements across the entire enterprise.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white text-black">
+            <div class="container mx-auto px-[18px] pt-12 pb-12 lg:px-8 lg:pt-24 lg:pb-24">
+                <div class="max-w-5xl mx-auto">
+                    <h2 class="font-sans-title text-[1.875rem] lg:text-[2.625rem] leading-tight font-medium mb-8">
+                        Our Core Microsoft Expertise
+                    </h2>
+
+                    <div class="bg-palladium-50 rounded-[10px] p-8 lg:p-12 mb-8">
+                        <p class="text-base lg:text-lg leading-relaxed mb-6">
+                            Our dedicated professionals hold core expertise across the Microsoft technology stack,
+                            offering specialized solutions to meet diverse business needs.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base lg:text-lg leading-relaxed">
+                            <ul>
+                                <li>✔️ Enterprise Integration</li>
+                                <li>✔️ Wireless content delivery</li>
+                                <li>✔️ Business Intelligence and analytical solutions</li>
+                                <li>✔️ Administrator and end-user training</li>
+                            </ul>
+                            <ul>
+                                <li>✔️ Intranet & Extranet configuration</li>
+                                <li>✔️ SharePoint Portal Solutions</li>
+                                <li>✔️ Business and system analysis and documentation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-palladium-50 text-black">
+            <div class="container mx-auto px-[18px] pt-12 pb-12 lg:px-8 lg:pt-24 lg:pb-24">
+                <div class="max-w-6xl mx-auto">
+                    <h2
+                        class="font-sans-title text-[1.875rem] lg:text-[2.625rem] leading-tight font-medium mb-12 text-center">
+                        Industries We Serve
+                    </h2>
+
+                    <div class="grid gap-6 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                        <div class="bg-white rounded-[10px] p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1rem] font-medium">Energy & Utilities</h4>
+                        </div>
+
+                        <div class="bg-white rounded-[10px] p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                        <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1rem] font-medium">Automotive</h4>
+                        </div>
+
+                        <div class="bg-white rounded-[10px] p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <line x1="1" y1="10" x2="23" y2="10" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1rem] font-medium">Banking & Finance</h4>
+                        </div>
+
+                        <div class="bg-white rounded-[10px] p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1rem] font-medium">Healthcare</h4>
+                        </div>
+
+                        <div class="bg-white rounded-[10px] p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" stroke="currentColor"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1rem] font-medium">Technology</h4>
+                        </div>
+
+                        <div class="bg-white rounded-[10px] p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <line x1="7" y1="2" x2="7" y2="22" stroke="currentColor" stroke-width="2" />
+                                        <line x1="17" y1="2" x2="17" y2="22" stroke="currentColor" stroke-width="2" />
+                                        <line x1="2" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2" />
+                                        <line x1="2" y1="7" x2="7" y2="7" stroke="currentColor" stroke-width="2" />
+                                        <line x1="2" y1="17" x2="7" y2="17" stroke="currentColor" stroke-width="2" />
+                                        <line x1="17" y1="17" x2="22" y2="17" stroke="currentColor" stroke-width="2" />
+                                        <line x1="17" y1="7" x2="22" y2="7" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1rem] font-medium">Media & Entertainment</h4>
+                        </div>
+
+                        <div class="bg-white rounded-[10px] p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1rem] font-medium">Retail</h4>
+                        </div>
+
+                        <div class="bg-white rounded-[10px] p-6 text-center hover:shadow-lg transition-shadow">
+                            <div class="mb-4 flex justify-center">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <polyline points="9 22 9 12 15 12 15 22" stroke="currentColor"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1rem] font-medium">Many More</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white text-black">
+            <div class="container mx-auto px-[18px] pt-12 pb-12 lg:px-8 lg:pt-24 lg:pb-24">
+                <div class="max-w-6xl mx-auto">
+                    <h2 class="font-sans-title text-[1.875rem] lg:text-[2.625rem] leading-tight font-medium mb-12">
+                        Microsoft Expertise Focus Areas
+                    </h2>
+
+                    <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                        <div class="bg-palladium-50 rounded-[10px] p-8 hover:shadow-lg transition-shadow">
+                            <div class="mb-6">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M9 11l3 3L22 4" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1.25rem] font-medium mb-3">Enterprise Integration</h4>
+                            <p class="text-base leading-relaxed text-gray-700">
+                                Seamlessly connect disparate systems and applications across your organization using
+                                Microsoft technologies for unified data and processes.
+                            </p>
+                        </div>
+
+                        <div class="bg-palladium-50 rounded-[10px] p-8 hover:shadow-lg transition-shadow">
+                            <div class="mb-6">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1.25rem] font-medium mb-3">Business Intelligence & Analytics</h4>
+                            <p class="text-base leading-relaxed text-gray-700">
+                                Implement powerful analytical solutions to transform raw data into actionable insights,
+                                driving smarter, data-driven decisions.
+                            </p>
+                        </div>
+
+                        <div class="bg-palladium-50 rounded-[10px] p-8 hover:shadow-lg transition-shadow">
+                            <div class="mb-6">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1.25rem] font-medium mb-3">SharePoint Portal Solutions</h4>
+                            <p class="text-base leading-relaxed text-gray-700">
+                                Custom configuration and deployment of SharePoint for robust Intranet & Extranet setups,
+                                content management, and collaboration.
+                            </p>
+                        </div>
+
+                        <div class="bg-palladium-50 rounded-[10px] p-8 hover:shadow-lg transition-shadow">
+                            <div class="mb-6">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1.25rem] font-medium mb-3">Training & Documentation</h4>
+                            <p class="text-base leading-relaxed text-gray-700">
+                                Provide comprehensive administrator and end-user training along with expert business and
+                                system analysis and documentation services.
+                            </p>
+                        </div>
+
+                        <div class="bg-palladium-50 rounded-[10px] p-8 hover:shadow-lg transition-shadow">
+                            <div class="mb-6">
+                                <div class="w-16 h-16 rounded-full bg-ice-blue flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor"
+                                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        <circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="2" />
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h4 class="text-[1.25rem] font-medium mb-3">Wireless Content Delivery</h4>
+                            <p class="text-base leading-relaxed text-gray-700">
+                                Specialized solutions for delivering and managing content over wireless and mobile
+                                platforms built on Microsoft foundations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-palladium-50 text-black">
+            <div class="container mx-auto px-[18px] pt-12 pb-12 lg:px-8 lg:pt-24 lg:pb-24">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-aadrika-blue text-white rounded-[10px] p-8 lg:p-12">
+                        <h3 class="font-sans-title text-[1.5rem] lg:text-[2rem] leading-tight font-medium mb-6">
+                            The Aadrika Microsoft Advantage
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex gap-4 items-start">
+                                <div class="shrink-0 mt-1">
+                                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <p class="text-base lg:text-lg leading-relaxed">
+                                    <strong>Core Expertise:</strong> Dedicated team with deep, core expertise in
+                                    Microsoft technologies and the entire product line.
+                                </p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="shrink-0 mt-1">
+                                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <p class="text-base lg:text-lg leading-relaxed">
+                                    <strong>Integrated Approach:</strong> Providing solutions with the agility and
+                                    scalability needed for modern enterprises.
+                                </p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="shrink-0 mt-1">
+                                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                                <p class="text-base lg:text-lg leading-relaxed">
+                                    <strong>Performance Focus:</strong> Solutions designed to optimize operations and
+                                    improve overall organizational performance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white text-black">
+            <div class="container mx-auto px-[18px] pt-12 pb-12 lg:px-8 lg:pt-16 lg:pb-16">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="font-sans-title text-[1.875rem] lg:text-[2.625rem] leading-tight font-medium mb-6">
+                        Ready to Achieve High Performance with Microsoft?
+                    </h2>
+                    <p class="text-base lg:text-lg leading-relaxed mb-8">
+                        Let's discuss how our Microsoft-based solutions can drive your business forward and deliver
+                        enterprise-wide improvements.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About US</h3>
+                    <ul>
+                        <li><a href="/aboutUS/ourvalues.html">Our Values</a></li>
+                        <li><a href="/aboutUS/ourapproach.html">Our Approach</a></li>
+                        <li><a href="/aboutUS/vision.html">Vision</a></li>
+                        <li><a href="/aboutUS/careers.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="/services/capability-development.html">Capability Development</a></li>
+                        <li><a href="/services/cost-management.html">Cost Management & Reduction</a></li>
+                        <li><a href="/services/new-product.html">New Product & Service Development</a></li>
+                        <li><a href="/services/post-merger.html">Post Merger Integration</a></li>
+                        <li><a href="/services/procurement-strategic.html">Procurement & Strategic Sourcing</a></li>
+                        <li><a href="/services/shared-services.html">Shared Services</a></li>
+                        <li><a href="/services/technology-solution.html">Technology Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Technology Solution</h3>
+                    <ul>
+                        <li><a href="/technologySolution/sap.html">SAP</a></li>
+                        <li><a href="/technologySolution/oracle.html">Oracle</a></li>
+                        <li><a href="/technologySolution/microsoft.html">Microsoft</a></li>
+                        <li><a href="/technologySolution/analytics.html">Analytics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Industries</h3>
+                    <ul>
+                        <li><a href="/industries/energy-utilities.html">Energy & Utilities</a></li>
+                        <li><a href="/industries/financial-services.html">Financial Services</a></li>
+                        <li><a href="/industries/media-entertainment.html">Media & Entertainment</a></li>
+                        <li><a href="/industries/retail-consumer.html">Retail & Customer</a></li>
+                        <li><a href="/industries/technology.html">Technology</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Expertise</h3>
+                    <ul>
+                        <li><a href="/expertise/analytics-reporting.html">Analytics Reporting</a></li>
+                        <li><a href="/expertise/change-management.html">Change Management</a></li>
+                        <li><a href="/expertise/operational-strategy.html">Operational Strategy</a></li>
+                        <li><a href="/expertise/process-engineering.html">Process Engineering</a></li>
+                        <li><a href="/expertise/program-project-management.html">Program & Project Management</a></li>
+                        <li><a href="/expertise/systems-implementation.html">Analytics</a></li>
+                        <li><a href="/expertise/training.html">Training</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright-text">© Aadrika Global Info Solutions</p>
+            </div>
+        </div>
+    </footer>
+</body> 
+<script src="/script.js"></script>
+
+</html>
